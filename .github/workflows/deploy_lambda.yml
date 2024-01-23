@@ -22,6 +22,16 @@ jobs:
       - name: zip Lambda Function
         run: |
           npm run compress
+      - name: zip Node modules
+        run: |
+          npm ci --production && npm run compress_modules
+      - name: AWS Deploy modules
+        run: |
+          aws lambda publish-layer-version --layer-name gameMasterModules \
+            --description "Node modules for the GameMaster Bot" \
+            --zip-file fileb://modules.zip \
+            --compatible-runtimes nodejs20.x \
+            --compatible-architectures "arm64" "x86_64"
       - name: AWS Deploy
         run: |
-          aws lambda update-function-code --function-name GameMaster --zip-file fileb://GetWinner.zip
+          aws lambda update-function-code --function-name GameMaster --zip-file fileb://GameMaster.zip
