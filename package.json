@@ -5,6 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "node --env-file=.env src/app.js",
+    "compress": "cd src && zip -r -x'app.js' ../GetWinner.zip ../package.json *",
+    "compress_modules": "zip -r output/ modules.zip node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -125,8 +125,8 @@ dist
 # VSCode configurations
 .vscode/
 
-# Output folder (for local use)
-output/
+# Zip files (for local use)
+*.zip
 
 # yarn v2
 .yarn/cache
