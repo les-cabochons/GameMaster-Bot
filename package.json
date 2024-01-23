@@ -1,0 +1,27 @@
+{
+  "name": "gamemaster",
+  "version": "1.0.0",
+  "description": "A bot that reads the results for guessthegame in a channel. It can assign a winner and post the score,",
+  "main": "main.js",
+  "scripts": {
+    "start": "node --env-file=.env src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/les-cabochons/guessthegame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/les-cabochons/guessthegame/issues"
+  },
+  "homepage": "https://github.com/les-cabochons/guessthegame#readme",
+  "dependencies": {
+    "discord-interactions": "^3.4.0",
+    "discord.js": "^14.14.1",
+    "google-auth-library": "^9.4.2",
+    "google-spreadsheet": "^4.1.1"
+  }
+}
