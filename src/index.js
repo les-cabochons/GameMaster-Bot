@@ -31,7 +31,7 @@ export const handler = async (event) => {
           `THE WINNER IS: ${winner.user} (score: ${winner.score})`
         );
 
-        return {
+        return JSON.stringify({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
             tts: False,
@@ -39,7 +39,7 @@ export const handler = async (event) => {
             embeds: [],
             allowed_mentions: [],
           },
-        };
+        });
       }
     } catch (error) {
       console.error(error);
