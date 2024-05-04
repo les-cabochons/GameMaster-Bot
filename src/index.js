@@ -24,6 +24,7 @@ export const handler = async (event) => {
 
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     try {
+      const client = registerClient();
       if (interaction.data.name === "get-winner") {
         const winner = await getWinner(client, interaction.channelId);
 
@@ -43,10 +44,6 @@ export const handler = async (event) => {
       }
     } catch (error) {
       console.error(error);
-
-      if (error instanceof InteractionError) {
-        await chatInteraction.reply(error.message);
-      }
 
       throw JSON.stringify(error);
     }
