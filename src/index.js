@@ -26,6 +26,7 @@ export const handler = async (event) => {
     try {
       const client = registerClient();
       await client.login(TOKEN);
+      console.log(client);
       const chatInteraction = new ChatInputCommandInteraction(
         client,
         interaction
