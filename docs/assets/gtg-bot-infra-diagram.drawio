@@ -1,0 +1,85 @@
+<mxfile host="Electron" modified="2024-05-04T05:06:00.848Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="PARLRMpizXMxJH6lbz_l" version="24.2.5" type="device">
+  <diagram name="Page-1" id="SVLqVZ1LzpJN_yotKFvn">
+    <mxGraphModel dx="1881" dy="1106" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="juq_wjuTvhValRtsGfSx-1" value="AWS Cloud" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
+          <mxGeometry x="35.00000000000006" y="32" width="644" height="644" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-16" value="" style="group" vertex="1" connectable="0" parent="juq_wjuTvhValRtsGfSx-1">
+          <mxGeometry x="77.50000000000006" y="52" width="211" height="123" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-2" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-16">
+          <mxGeometry x="66.49999999999994" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-12" value="Amazon Api Gateway" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-16">
+          <mxGeometry y="87" width="211" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-17" value="" style="group" vertex="1" connectable="0" parent="juq_wjuTvhValRtsGfSx-1">
+          <mxGeometry x="99.50000000000006" y="244" width="167" height="123" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-3" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-17">
+          <mxGeometry x="44.49999999999994" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-13" value="Amazon Lambda" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-17">
+          <mxGeometry x="-5.684341886080802e-14" y="87" width="167" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-18" value="" style="group" vertex="1" connectable="0" parent="juq_wjuTvhValRtsGfSx-1">
+          <mxGeometry x="124.5" y="435" width="119" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-14" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-18">
+          <mxGeometry x="20.499999999999943" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-15" value="Amazon S3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-18">
+          <mxGeometry y="90" width="119" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-23" value="" style="group" vertex="1" connectable="0" parent="juq_wjuTvhValRtsGfSx-1">
+          <mxGeometry x="353.99999999999994" y="52" width="221" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-21" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eventbridge;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-23">
+          <mxGeometry x="71.5" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-22" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Architects Daughter&amp;quot;; font-size: 20px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Amazon EventBridge&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;align=center;" vertex="1" parent="juq_wjuTvhValRtsGfSx-23">
+          <mxGeometry y="89" width="221" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-26" value="" style="group" vertex="1" connectable="0" parent="juq_wjuTvhValRtsGfSx-1">
+          <mxGeometry x="353.9999999999999" y="244" width="221.00000000000006" height="137" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-24" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-26">
+          <mxGeometry x="71.5" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-25" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Architects Daughter&amp;quot;; font-size: 20px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Amazon CloudWatch&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;align=center;" vertex="1" parent="juq_wjuTvhValRtsGfSx-26">
+          <mxGeometry y="91" width="221" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-29" value="" style="group" vertex="1" connectable="0" parent="juq_wjuTvhValRtsGfSx-1">
+          <mxGeometry x="374.5" y="435" width="202" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-27" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#C925D1;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-29">
+          <mxGeometry x="61.99999999999994" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-28" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Architects Daughter&amp;quot;; font-size: 20px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Amazon DynamoDB&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;align=center;" vertex="1" parent="juq_wjuTvhValRtsGfSx-29">
+          <mxGeometry y="89" width="202" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-20" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="687" y="36" width="159.67000000000007" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-5" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://logos-world.net/wp-content/uploads/2020/12/Discord-Emblem.png;" vertex="1" parent="juq_wjuTvhValRtsGfSx-20">
+          <mxGeometry width="159.67" height="89.81" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-10" value="Discord" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="juq_wjuTvhValRtsGfSx-20">
+          <mxGeometry x="35.34000000000003" y="82" width="89" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-32" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="36" y="691" width="583" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-30" value="Infrastructure for GameMaster Discord Bot" style="text;strokeColor=none;fillColor=none;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=25;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontStyle=1" vertex="1" parent="juq_wjuTvhValRtsGfSx-32">
+          <mxGeometry width="583" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="juq_wjuTvhValRtsGfSx-31" value="may 4 2024 - version 1" style="text;strokeColor=none;fillColor=none;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontStyle=0" vertex="1" parent="juq_wjuTvhValRtsGfSx-32">
+          <mxGeometry y="24" width="583" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
