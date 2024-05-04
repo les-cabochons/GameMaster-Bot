@@ -25,6 +25,9 @@ export const handler = async (event) => {
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     try {
       const client = registerClient();
+      while(!client.isReady()){
+        await sleep(500);
+      }
       await client.login(TOKEN);
       if (interaction.data.name === "get-winner") {
         const winner = await getWinner(client, interaction.channelId);
