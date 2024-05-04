@@ -6,7 +6,7 @@ export const registerClient = () => {
   return new Client({ intents: [GatewayIntentBits.Guilds] });
 };
 
-export const registerListeners = (client) => {
+export const  registerListeners = (client) => {
   client.on("interactionCreate", async (interaction) => {
     if (!interaction.isChatInputCommand()) return;
 

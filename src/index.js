@@ -1,6 +1,8 @@
 import { InteractionResponseType, InteractionType } from "discord-interactions";
+import { ChatInputCommandInteraction } from "discord.js";
 
-import { registerClient, registerListeners } from "./discord/client.js";
+import { registerClient } from "./discord/client.js";
+import { InteractionError } from "./utils/interactionError.js";
 
 import { verifyDiscordRequest } from "./discord/verification.js";
 
@@ -21,9 +23,34 @@ export const handler = async (event) => {
 
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     const client = registerClient();
-    registerListeners(client);
-    client.login(TOKEN);
+    const chatInteraction = new ChatInputCommandInteraction(
+      client,
+      interaction.data
+    );
+    console.log(chatInteraction);
+    try {
+      if (chatInteraction.commandName === "get-winner") {
+        const winner = await getWinner(client, interaction.channelId);
+
+        await chatInteraction.reply(
+          `THE WINNER IS: ${winner.user} (score: ${winner.score})`
+        );
+      }
+    } catch (error) {
+      console.error(error);
+
+      if (error instanceof InteractionError) {
+        await chatInteraction.reply(error.message);
+      }
+    }
+    await client.login(TOKEN);
+
+    return {
+      type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+    };
   }
 
-  throw JSON.stringify(`[NOT FOUND] Interaction type (${interaction.type}) not found.`);
+  throw JSON.stringify(
+    `[NOT FOUND] Interaction type (${interaction.type}) not found.`
+  );
 };
