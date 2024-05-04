@@ -25,26 +25,22 @@ export const handler = async (event) => {
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     try {
       const client = registerClient();
-      while(!client.isReady()){
-        await sleep(500);
+      while (!client.isReady()) {
+        await new Promise((done) => setTimeout(() => done(), 5000));
       }
       await client.login(TOKEN);
-      if (interaction.data.name === "get-winner") {
+      console.log(client);
+      const chatInteraction = new ChatInputCommandInteraction(
+        client,
+        interaction
+      );
+      console.log(chatInteraction);
+      if (chatInteraction.commandName === "get-winner") {
         const winner = await getWinner(client, interaction.channelId);
 
         await chatInteraction.reply(
           `THE WINNER IS: ${winner.user} (score: ${winner.score})`
         );
-
-        return JSON.stringify({
-          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-          data: {
-            tts: False,
-            content: `THE WINNER IS: ${winner.user} (score: ${winner.score})`,
-            embeds: [],
-            allowed_mentions: [],
-          },
-        });
       }
     } catch (error) {
       console.error(error);
