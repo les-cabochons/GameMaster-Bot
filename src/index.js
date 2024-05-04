@@ -24,6 +24,7 @@ export const handler = async (event) => {
 
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     const client = registerClient();
+    await client.login(TOKEN);
     const chatInteraction = new ChatInputCommandInteraction(
       client,
       interaction
@@ -44,7 +45,6 @@ export const handler = async (event) => {
         await chatInteraction.reply(error.message);
       }
     }
-    await client.login(TOKEN);
 
     return {
       type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
