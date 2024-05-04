@@ -25,5 +25,5 @@ export const handler = async (event) => {
     client.login(TOKEN);
   }
 
-  throw JSON.stringify("[NOT FOUND] Interaction type not found.");
+  throw JSON.stringify(`[NOT FOUND] Interaction type (${interaction.type}) not found.`);
 };
