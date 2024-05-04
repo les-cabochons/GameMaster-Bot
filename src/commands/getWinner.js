@@ -1,10 +1,10 @@
 import { InteractionError } from '../utils/interactionError.js';
 import { fetchChannel } from '../discord/channels.js';
 import { getAllMessagesForGivenDay } from '../discord/messages.js';
-import { getScores, getWinner } from '../guessTheGame/score.js';
+import { getScores, getHighestScore } from '../guessTheGame/score.js';
 
 
-export async function GetWinner(client, channelId) {
+export async function getWinner(client, channelId) {
   const channel = await fetchChannel(client, channelId);
   if (!channel.isTextBased() || channel.isDMBased()) {
     throw new InteractionError(
@@ -22,7 +22,7 @@ export async function GetWinner(client, channelId) {
     throw new InteractionError("No scores found.");
   }
 
-  const winner = getWinner(scores);
+  const winner = getHighestScore(scores);
   if (!winner) {
     throw new InteractionError("No winners found.");
   }

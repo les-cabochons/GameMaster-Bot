@@ -1,9 +1,10 @@
-import {
-  InteractionResponseType,
-  InteractionType,
-} from "discord-interactions";
+import { InteractionResponseType, InteractionType } from "discord-interactions";
+
+import { registerClient, registerListeners } from "./discord/client.js";
 
 import { verifyDiscordRequest } from "./discord/verification.js";
+
+const { TOKEN } = process.env;
 
 export const handler = async (event) => {
   const { isValid, interaction } = verifyDiscordRequest(event);
@@ -13,10 +14,16 @@ export const handler = async (event) => {
   }
 
   if (interaction.type === InteractionType.PING) {
-    return  {
-        type: InteractionResponseType.PONG
-    }
+    return {
+      type: InteractionResponseType.PONG,
+    };
   }
-  
-    throw JSON.stringify("[NOT FOUND] Did not work!");
+
+  if (interaction.type === InteractionType.APPLICATION_COMMAND) {
+    const client = registerClient();
+    registerListeners(client);
+    client.login(TOKEN);
+  }
+
+  throw JSON.stringify("[NOT FOUND] Interaction type not found.");
 };

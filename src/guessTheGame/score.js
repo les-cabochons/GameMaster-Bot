@@ -26,7 +26,7 @@ function calculateScore(message) {
   return (goodGuesses + emptyGuesses) * 3 + franchiseGuesses;
 }
 
-export function getWinner(scores) {
+export function getHighestScore(scores) {
     const sortedScores = scores.sort((a, b) => b.score - a.score);
     const winner = sortedScores[0];
     
