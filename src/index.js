@@ -1,5 +1,6 @@
 import { InteractionResponseType, InteractionType } from "discord-interactions";
 import { ChatInputCommandInteraction } from "discord.js";
+import { getWinner } from "./commands/getWinner.js";
 
 import { registerClient } from "./discord/client.js";
 import { InteractionError } from "./utils/interactionError.js";
@@ -25,7 +26,7 @@ export const handler = async (event) => {
     const client = registerClient();
     const chatInteraction = new ChatInputCommandInteraction(
       client,
-      interaction.data
+      interaction
     );
     console.log(chatInteraction);
     try {

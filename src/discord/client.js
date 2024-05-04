@@ -1,5 +1,6 @@
 import { Client, GatewayIntentBits } from "discord.js";
 import { InteractionError } from "../utils/interactionError.js";
+import { getWinner } from "../commands/getWinner.js";
 
 
 export const registerClient = () => {
