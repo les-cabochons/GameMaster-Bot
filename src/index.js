@@ -23,14 +23,14 @@ export const handler = async (event) => {
   }
 
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
-    const client = registerClient();
-    await client.login(TOKEN);
-    const chatInteraction = new ChatInputCommandInteraction(
-      client,
-      interaction
-    );
-    console.log(chatInteraction);
     try {
+      const client = registerClient();
+      await client.login(TOKEN);
+      const chatInteraction = new ChatInputCommandInteraction(
+        client,
+        interaction
+      );
+      console.log(chatInteraction);
       if (chatInteraction.commandName === "get-winner") {
         const winner = await getWinner(client, interaction.channelId);
 
@@ -44,6 +44,8 @@ export const handler = async (event) => {
       if (error instanceof InteractionError) {
         await chatInteraction.reply(error.message);
       }
+
+      throw JSON.stringify(error);
     }
 
     return {
