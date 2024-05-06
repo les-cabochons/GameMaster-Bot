@@ -1,7 +1,7 @@
 import { InteractionResponseType } from "discord-interactions";
 
-import { interactionUrl } from "./urls.js";
-import { post } from "../utils/https.js";
+import { interactionUrl, followUpUrl } from "./urls.js";
+import { post, patch } from "../utils/https.js";
 
 export const deferredMessage = async (interactionId, token) => {
   const body = {
