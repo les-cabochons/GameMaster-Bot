@@ -1,5 +1,6 @@
 import { Client, Events, GatewayIntentBits } from "discord.js";
 import { InteractionResponseType, InteractionType } from "discord-interactions";
+
 import { InteractionError } from "../utils/interactionError.js";
 import { getWinner } from "../commands/getWinner.js";
 
@@ -15,7 +16,7 @@ export const registerClient = () => {
 
 export const registerListeners = (client) => {
   client.on("interactionCreate", async (interaction) => {
-    
+
     if (!interaction.isChatInputCommand()) return;
 
     if (interaction.type === InteractionType.PING) {

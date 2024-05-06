@@ -1,4 +1,4 @@
-import { updateCommands } from "./server.js";
+import { updateCommands } from "./discord/commands.js";
 import { registerClient, registerListeners } from "./discord/client.js";
 
 const { TOKEN, APPLICATION_ID, ENVIRONMENT } = process.env;

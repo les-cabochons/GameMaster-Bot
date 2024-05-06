@@ -1,13 +1,12 @@
-import { registerClient } from "./discord/client.js";
 import fetch from "node-fetch";
-
-import { updateCommands } from "./server.js";
-
 import { InteractionResponseType, InteractionType } from "discord-interactions";
+
+import { registerClient } from "./discord/client.js";
+import { deferredMessage, followUpMessage } from "./discord/interactions.js";
+import { updateCommands } from "./discord/commands.js";
+import { verifyDiscordRequest } from "./discord/verification.js";
 import { InteractionError } from "./utils/interactionError.js";
 import { getWinner } from "./commands/getWinner.js";
-
-import { verifyDiscordRequest } from "./discord/verification.js";
 
 const { TOKEN, APPLICATION_ID } = process.env;
 
@@ -24,53 +23,41 @@ export const handler = async (event) => {
     throw JSON.stringify("[UNAUTHORIZED] Bad request signature.");
   }
 
+  await deferredMessage(interaction.id, interaction.token);
+
   if (interaction.type === InteractionType.PING) {
-    console.log("this is a ping");
-    return {
-      type: InteractionResponseType.PONG,
-    };
+    await followUpMessage(
+      interaction.application_id,
+      interaction.token,
+      "PONG"
+    );
   } else if (interaction.type === InteractionType.APPLICATION_COMMAND) {
-    console.log("this is a command");
-    console.log(interaction);
     try {
       if (interaction.data.name === "get-winner") {
-        console.log("this is the command get-winnger");
         const winner = await getWinner(client, interaction.channel_id);
-        console.log(`winner found${winner}`);
-        // await interaction.reply(
-        //   `THE WINNER IS: ${winner.user} (score: ${winner.score})`
-        // );
-        return JSON.stringify({
-          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-          data: {
-            content: `THE WINNER IS: ${winner.user} (score: ${winner.score})`,
-          },
-        });
+
+        await followUpMessage(
+          interaction.application_id,
+          interaction.token,
+          `THE WINNER IS: ${winner.user} (score: ${winner.score})`
+        );
       }
     } catch (error) {
       console.error(error);
 
       if (error instanceof InteractionError) {
-        const body = {
-          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-          data: {
-            content: "Test",
-          },
-        };
-
-        const url =
-          `https://discord.com/api/v10/interactions/${interaction.id}/${interaction.token}/callback`;
-
-        await fetch(url, {
-          method: "post",
-          body: JSON.stringify(body),
-          headers: { "Content-Type": "application/json" },
-        });
+        await followUpMessage(
+          interaction.application_id,
+          interaction.token,
+          error.message
+        );
       }
     }
   } else {
-    throw JSON.stringify(
-      `[NOT FOUND] Interaction type (${interaction.type}) not found.`
+    await followUpMessage(
+      interaction.application_id,
+      interaction.token,
+      "Something went wrong. Please try again."
     );
   }
 };
