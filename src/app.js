@@ -1,12 +1,12 @@
 import { startServer } from "./server.js";
 import { registerClient, registerListeners } from "./discord/client.js";
 
-const { TOKEN, ENVIRONMENT } = process.env;
+const { TOKEN, APPLICATION_ID, ENVIRONMENT } = process.env;
 
 const client = registerClient();
 
 if (ENVIRONMENT === "development") {
-  await startServer();
+  await updateCommands(TOKEN, APPLICATION_ID);
 
   client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`);

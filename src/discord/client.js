@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits } from "discord.js";
+import { Client, Events, GatewayIntentBits } from "discord.js";
 import { InteractionResponseType, InteractionType } from "discord-interactions";
 import { InteractionError } from "../utils/interactionError.js";
 import { getWinner } from "../commands/getWinner.js";
