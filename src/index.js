@@ -1,5 +1,4 @@
-import fetch from "node-fetch";
-import { InteractionResponseType, InteractionType } from "discord-interactions";
+import { InteractionType } from "discord-interactions";
 
 import { registerClient } from "./discord/client.js";
 import { deferredMessage, followUpMessage } from "./discord/interactions.js";

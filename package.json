@@ -4,10 +4,9 @@
   "description": "A bot that reads the results for guessthegame in a channel. It can assign a winner and post the score,",
   "main": "main.js",
   "scripts": {
-    "start": "node --env-file=.env src/app.js",
-    "compress": "cd src && zip -r -xapp.js ../GameMaster.zip ../package.json *",
-    "compress_modules": "zip -r modules.zip node_modules",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --env-file=.env src/local.js",
+    "compress": "cd src && zip -r -xlocal.js ../GameMaster.zip ../package.json *",
+    "compress_modules": "zip -r modules.zip node_modules"
   },
   "repository": {
     "type": "git",
