@@ -7,7 +7,7 @@ const commands = [
   },
   {
     name: 'ping',
-    description: 'Replies with winner current winner for the day.',
+    description: 'A test command that replies pong.',
   },
 ];
 

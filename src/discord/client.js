@@ -15,6 +15,7 @@ export const registerClient = () => {
 
 export const registerListeners = (client) => {
   client.on("interactionCreate", async (interaction) => {
+    
     if (!interaction.isChatInputCommand()) return;
 
     if (interaction.type === InteractionType.PING) {
