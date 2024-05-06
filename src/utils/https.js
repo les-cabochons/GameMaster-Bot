@@ -7,7 +7,7 @@ export const post = async (url, body) => {
     headers: { "Content-Type": "application/json" },
   });
 
-  return response.json();
+  return response;
 };
 
 export const patch = async (url, body) => {
@@ -17,5 +17,5 @@ export const patch = async (url, body) => {
     headers: { "Content-Type": "application/json" },
   });
 
-  return response.json();
+  return response;
 };
